@@ -143,3 +143,26 @@ console.log(remove_dublicate(array))
 
 //1.h --> Rotate an array by k times
 
+(function() {
+    function rotateArray(arr, k) {
+      if (Array.isArray(arr) && arr.length > 0) {
+        const n = arr.length;
+        const effectiveRotation = k % n;
+  
+        for (let i = 0; i < n; i++) {
+          const rotatedIndex = (i - effectiveRotation + n) % n;
+          const temp = arr[i];
+          arr[i] = arr[rotatedIndex];
+          arr[rotatedIndex] = temp;
+        }
+  
+        return arr;
+      } else {
+        return 'Invalid input. Please provide a non-empty array.';
+      }
+    }
+    let arr = [1, 2, 3, 4, 5];
+  rotateArray(arr, 2);
+  console.log(arr);
+})();
+  

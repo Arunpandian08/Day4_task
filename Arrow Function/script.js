@@ -75,7 +75,7 @@ const findPalindromesInArray = function(array) {
 
     return palindromes;
 };
-let wordsArray = ["level", "hello", "civic", "world", "radar"];
+let wordsArray = ["level", "hello", "civic", "world", "radare"];
 let palindromes = findPalindromesInArray(wordsArray);
 
 console.log(palindromes);
